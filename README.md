@@ -41,7 +41,8 @@ Para executar o teste, basta inserir algum nome, dentro do input apresentado na 
 
 ## 📦 Desenvolvimento
 
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
+A aplicação foi desenvolvida com a linguagem JavaScript, sendo utilizado o React Hooks ( useState e useEffect), para ser possível acessar a API e realizarmos as mudanças necessárias.
+Um pilar no desenvolvimento foi a componentização, para redução e reutilização de códigos, deixando assim a aplicação mais limpa e coesa.
 
 ## 🛠️ Construído com
 
