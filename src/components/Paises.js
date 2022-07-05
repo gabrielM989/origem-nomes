@@ -20,8 +20,10 @@ export default function Paises(props) {
   })
   //console.log("paisesObjetos: " + paisesObjetos)
 
+  const testNome = "gabriel"
   React.useEffect(() => {
-    fetch('https://api.nationalize.io/?name=' + props.name)
+    //fetch('https://api.nationalize.io/?name=' + props.name)
+    fetch('https://api.nationalize.io/?name=' + testNome)
       .then((response) => response.json())
       .then((data) => {
         let countries = []

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Paises from './components/Paises';
+import "./style.css";
 import ListComponent from "./components/ListComponent";
 
 export default function App() {
@@ -17,15 +18,14 @@ export default function App() {
   console.log('components: ' + components)
  
   return (
-    <div>
-      <h1>Olá StackBlitz!</h1>
-      <label>Digite o seu nome: </label>
+    <div class="container">
+      <h1>Pesquisa Origem Nomes!!!</h1>
       <input 
         type="text" placeholder="Informe o seu nome" name="nome"
         value={nome} onChange = {(e) => setNome(e.target.value)} 
       />
       <p></p>
-      <button onClick={clickNoBotao}>Confirma</button>
+      <button class="btn" onClick={clickNoBotao}>Confirma</button>
       <Paises name={nome}></Paises>
 
       {/* {components.map((item, i) => ( <ListComponent text={item} /> ))} */}
