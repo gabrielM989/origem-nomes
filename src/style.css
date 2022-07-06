@@ -46,3 +46,19 @@ html, body {
   transition: all 0.5s ease-in;
 }
 
+.btn2:hover {
+  
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:black;
+  
+  background-color: rgb(255, 0, 76);
+  transition: all 0.5s ease-in;
+}
+
+

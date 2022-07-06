@@ -1,23 +1,26 @@
 import * as React from 'react';
 import Paises from './components/Paises';
 import "./style.css";
-import ListComponent from "./components/ListComponent";
 
 export default function App() {
-  const [nome, setNome] = React.useState("");
-  const [pais, setPais] = React.useState("");
-
+  const [nome, setNome] = React.useState("")
+  const [pais, setPais] = React.useState("")
   //console.log("nome: " + nome)
 
+  function limpaPagina() {
+    window.location.reload()
+  }
+
   function clickNoBotao(event, novoNome) {
-    //console.log("clickNoBotao event: " + event + " - novoNome: " + novoNome);
-    setPais(<Paises name={novoNome}></Paises>)    
+    //console.log("clickNoBotao novoNome: " + novoNome)
+    setPais(<Paises
+              name={novoNome}>
+            </Paises>)  
   };
-  //console.log("components: " + components);
- 
+
   return (
     <div class="container">
-      <h1>Pesquisa Origem Nomes!!!</h1>
+      <h1>Pesquisa Origem Nomes!!</h1>
       <input
         type="text"
         placeholder="Informe o seu nome"
@@ -25,14 +28,15 @@ export default function App() {
         value={nome}
         onChange={e => setNome(e.target.value)}
       />
-
       <p></p>
-
-      <button 
-        onClick={event => clickNoBotao(event, nome)}>
+      <button class="btn"
+        onClick={e => clickNoBotao(e, nome)}>
         Confirma
       </button>
-
+      <button class="btn2"
+        onClick={e => limpaPagina(e)}>
+        Limpar
+      </button>
       {pais}
     </div>
   )
